@@ -16,3 +16,22 @@
 ```script
 go run main.go -p 1213
 ```
+
+## health check option for docker 
+```script==
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD ["/bin/helloworld", "-ping"]
+```
+
+## how to build
+```script===
+make docker
+```
+## how to run
+```script==
+docker run -p 4000:8080 json/helloworld
+``` 
+
+## how to check status
+```script==
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD ["/bin/helloworld", "-ping"]
+```
